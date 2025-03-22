@@ -1,0 +1,141 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  &__inner {
+    position: relative;
+    min-height: clamp(3.125rem, 2.21rem + 3.9vw, 5.625rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    z-index: 4;
+    img {
+      max-width: 100%;
+    }
+    @include hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__action {
+    position: relative;
+    z-index: 5;
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.menu {
+  &__body {
+    @include mobile {
+      position: absolute;
+      padding: 3rem 2rem 1rem;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background: #d10ed1;
+      &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3.125rem;
+        width: 100%;
+        z-index: 3;
+        background-color: var(--colod-dark);
+      }
+    }
+    .menu-open & {
+      left: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    transition-duration: 0.3s;
+    @include hover {
+      transform: translateY(5px);
+      color: #d10ed1;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-laight);
+    font-size: 1rem;
+    @include hover {
+      transform: translateY(3px);
+      color: #d10ed1;
+    }
+  }
+}
+
+.icon-menu {
+  border: none;
+  position: relative;
+  width: 2rem;
+  height: 1rem;
+  span,
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-laight);
+  }
+
+  & span {
+    top: calc(50% - 1px);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  .menu-open & {
+    span {
+      width: 0;
+    }
+    &::before {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+    &::after {
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+  }
+}

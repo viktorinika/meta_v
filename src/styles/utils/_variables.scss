@@ -1,0 +1,18 @@
+$desktop: 1440.98px;
+$tablet: 1023.98px;
+$mobile: 767.98px;
+$mobile-s: 480.98px;
+
+$font-family: 'Poppins', sans-serif;
+$second-family: 'Orbitron', sans-serif;
+$container-padding-x: 1rem;
+$section-padding-y: clamp(1.25rem, 0.45rem + 3.41vw, 3.438rem);
+
+$container-width: 76rem;
+$color-light: #ffffff;
+$color-dark: #090823;
+$color-text: rgba(255, 255, 255, 0.8);
+$liner-gradient: linear-gradient(158deg, rgba(209, 14, 209, 0.64) 0%, #10a3da 100%);
+$background-gradient: linear-gradient(158deg, #d10ed1 0%, #10a3da 100%);
+$background-text-gradient: linear-gradient(158deg, #f86cf8 0%, #64cef5 100%);
+$background-body: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);

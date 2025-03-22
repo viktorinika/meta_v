@@ -1,0 +1,55 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+  color: var(--color-laight);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.67;
+  height: 100%;
+  &.menu-open {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+  min-height: 100%;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-x);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: clamp(2.188rem, 1.959rem + 0.98vw, 2.813rem);
+}
+
+h2 {
+  font-size: clamp(2.188rem, 1.959rem + 0.98vw, 2.813rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}

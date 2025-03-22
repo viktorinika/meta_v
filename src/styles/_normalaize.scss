@@ -1,0 +1,214 @@
+/**
+  Нормализація блочної моделі
+ */
+*,
+*::before,
+*::after {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/**
+  Убираємо внутрішні відступи ліворуч тегам списків,
+  у которих є атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираємо зовнішні відступи body и двум другим тегам,
+  у котрих є атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираємо зовнішні відступи вертикалі нужним тегам,
+  у котрих є атрибут class
+ */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+
+/**
+  Убираємо стандартний маркер маркированому списку,
+  у котрого є атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляємо вертикальні зовнішні відступи параграфа,
+  объявляємо локальную змінну для зовнішнього відтступа вниз,
+  щоб попередити взаємодію з більш складним селектором
+ */
+p {
+  --paragraphMarginBottom: 1.5rem;
+
+  margin-block: 0;
+}
+
+/**
+  Зовнішній відступ вниз для параграфа без атрибута class,
+  який знаходиться не останнім серед своїх сусідніх елементів
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+  Зпрощуємо роботу з зображеннями та відео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наслідуємо свойства шрифт для полів ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Згодится у більшісті випадків
+    (коли, наприклад, потрібно буде "прижати" футер до низу сайта)
+   */
+  height: 100%;
+  /**
+    Вбираємо скачок інтерфейса по горизонталі
+    при появі / зникненні скроллбара
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавний скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Згодиться в більшості ситуацій
+    (коли, наприклад, надо буде "прижати" футер до низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифікованний інтерліньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормалізація висоти елемента посилання при його інспектуванні в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+  Курсор-рука при наведенні на елемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводимо до єдиного кольору svg-елементи
+  (за виключенням тих, у котрих вже вказаний
+  атрибут fill со значенням 'none' або починається с 'url')
+ */
+:where([fill]:not(
+  [fill="none"],
+  [fill^="url"]
+)) {
+  fill: currentColor;
+}
+
+/**
+  Приводимо до єдиного кольору svg-елементи
+  (за виключенням тих, у котрих вже вказаний
+  атрибут stroke со значенням 'none')
+ */
+:where([stroke]:not(
+  [stroke="none"],
+  [stroke^="url"]
+)) {
+  stroke: currentColor;
+}
+
+/**
+  Чинимо баг затримки зміни кольору при взаємодії з svg-елементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведення рамок таблиць в класичний 'collapse' вигляд
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Видаляємо усі анімації і переходи для людей,
+  котрі предпочитають їх не використовувать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
