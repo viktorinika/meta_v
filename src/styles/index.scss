@@ -1,11 +1,6 @@
-@import "normalaize";
-@import "fonts";
-@import "mixins";
-@import "media";
-@use "variables" as *;
-@import "globals";
-@import "utils";
-
-@import "blocks/header";
-@import "blocks/hero";
-
+@use "normalaize";
+@use "fonts";
+@use "utils";
+@use "globals";
+@use "common";
+@use "blocks";

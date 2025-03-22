@@ -1,13 +1,387 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meta V</title>
+    <link rel="stylesheet" href="./src/styles/index.scss">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__inner container">
+            <a href="#" class="header__logo">
+                <img src="/images/logo.svg" alt="" class="logo__image">
+            </a>
+            <div class="header__menu menu">
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Resource</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Pricing</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__action icon-menu">
+                <button class="icon-manu">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__inner container">
+                <div class="hero__content">
+                    <div class="hero__header header-container">
+                        <h1 class="header-container__title">Explore the future of the <span class="gradient-text">Metaverse</span></h1>
+                        <div class="header-container__description">
+                            <p>Let's explore and create your experience with metaverse.</p>
+                        </div>
+                    </div>
+                    <div class="hero__actions">
+                        <button class="hero__button button button--big">Get Started</button>
+                        <button class="hero__button button button--transparent button--big">Explore Now</button>
+                    </div>
+                    <ul class="hero__achievement-list">
+                        <li class="hero__achievement-item item-achievement">
+                            <div class="item-achievement__value">29K+</div>
+                            <div class="item-achievement__text">Artworks</div>
+                        </li>
+                        <li class="hero__achievement-item item-achievement">
+                            <div class="item-achievement__value">18K+</div>
+                            <div class="item-achievement__text">Artists</div>
+                        </li>
+                        <li class="hero__achievement-item item-achievement">
+                            <div class="item-achievement__value">25K+</div>
+                            <div class="item-achievement__text">Auction</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero__image">
+                    <img src="/images/hero/hero-img.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="what-is">
+            <div class="what-is__inner container">
+                <div class="what-is__images images">
+                    <div class="images__img-1">
+                        <img src="/images/hero/img-1.png" alt="">
+                    </div>
+                    <div class="images__img-2">
+                        <img src="/images/hero/img-2.png" alt="">
+                    </div>
+                </div>
+                <div class="what-is__content">
+                    <div class="what-is__header header-container">
+                        <h2 class="header-container__title">What is <span class="gradient-text">Metaverse</span></h2>
+                        <div class="header-container__description">
+                            <p>Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies lacus. Nisi porta lorem mollis aliquam ut porttitor leo. Venenatis cras..</p>
+                        </div>
+                    </div>
+                    <a href="#" class="what-is__button button button--big">Get Started</a>
+                </div>
+            </div>
+        </section>
+        <section class="how-does">
+            <div class="how-does__inner container">
+                <div class="how-does__header header-container">
+                    <h2 class="header-container__title">How does the <span class="gradient-text">Metaverse work</span></h2>
+                    <div class="header-container__description">
+                        <p>Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies. Venenatis cras</p>
+                    </div>
+                </div>
+                <div class="how-does__body">
+                    <ul class="how-does__list list">
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-1.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Discuss with Colleagues</h3>
+                                        <div class="item-card__description">
+                                            <p>Working online is the same experience as work ing in an office. This will be. achieved with..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-2.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Virtual Reality Concert</h3>
+                                        <div class="item-card__description">
+                                            <p>Watching concerts virtually is one of the things that can be done in cyberspace..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-3.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Playing Games</h3>
+                                        <div class="item-card__description">
+                                            <p>For gamers, the metaverse could be an interesting platform of choice for the..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-4.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Online Travel</h3>
+                                        <div class="item-card__description">
+                                            <p>With cyberspace, online travel is certainly not impossible. We can do this with the help of..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-5.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Artworks</h3>
+                                        <div class="item-card__description">
+                                            <p>With cyberspace, online travel is certainly not impossible. We can do this with the help of..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="list__item">
+                            <article class="item-card">
+                                <a href="#" class="item-card__link">
+                                    <div class="item-card__image">
+                                        <img src="public/images/how-does/img-6.png">
+                                    </div>
+                                    <div class="item-card__content">
+                                        <h3 class="item-card__title">Digital Clothing</h3>
+                                        <div class="item-card__description">
+                                            <p>The community has also been active with the emergence of paintings or drawings..</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="item-card__actions">
+                                    <button class="item-card__btn button">Try now</button>
+                                    <a href="#" class="item-card__link button button--transparent">Explore now</a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="our-latest">
+           <div class="our-latest__inner container">
+               <div class="our-latest__header container header-container">
+                   <h2 class="header-container__title">Our Latest <span class="gradient-text">Activity</span></h2>
+                   <div class="header-container__description">
+                       <p>Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies. Venenatis cras</p>
+                   </div>
+               </div>
+               <div class="our-latest__body">
+                   <div class="our-latest__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-slide">
+                                    <div class="item-slide__video video-player">
+                                        <video
+                                            class="video-player__video"
+                                            src="public/images/video/file.mp4"
+                                            width="1182" height="650"
+                                            poster="public/images/video/%20imag-1.png"
+                                        >
+                                        </video>
+                                    </div>
+                                    <div class="item-slide__body">
+                                        <h3 class="item-slide__title">Metaverse Fashion Week</h3>
+                                        <button class="item-slide__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-slide">
+                                    <div class="item-slide__video video-player">
+                                        <video
+                                            class="video-player__video"
+                                            src="public/images/video/file.mp4"
+                                            width="1182" height="650"
+                                            poster="public/images/how-does/img-2.png"
+                                        ></video>
+                                    </div>
+                                    <div class="item-slide__body">
+                                        <h3 class="item-slide__title">Metaverse Fashion Week</h3>
+                                        <button class="item-slide__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-slide">
+                                    <div class="item-slide__video video-player">
+                                        <video
+                                            class="video-player__video"
+                                            src="public/images/video/file.mp4"
+                                            width="1182" height="650"
+                                            poster="public/images/video/img-2.png"
+                                        ></video>
+                                    </div>
+                                    <div class="item-slide__body">
+                                        <h3 class="item-slide__title">Metaverse Fashion Week</h3>
+                                        <button class="item-slide__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-slide">
+                                    <div class="item-slide__video video-player">
+                                        <video
+                                                class="video-player__video"
+                                                src="public/images/video/file.mp4"
+                                                width="1182" height="650"
+                                                poster="public/images/how-does/img-5.png"
+                                        ></video>
+                                    </div>
+                                    <div class="item-slide__body">
+                                        <h3 class="item-slide__title">Metaverse Fashion Week</h3>
+                                        <button class="item-slide__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-slide">
+                                    <div class="item-slide__video video-player">
+                                        <video
+                                                class="video-player__video"
+                                                src="public/images/video/file.mp4"
+                                                width="1182" height="650"
+                                                poster="public/images/how-does/img-6.png"
+                                        ></video>
+                                    </div>
+                                    <div class="item-slide__body">
+                                        <h3 class="item-slide__title">Metaverse Fashion Week</h3>
+                                        <button class="item-slide__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="swiper-button-prev"></div>
+                       <div class="swiper-button-next"></div>
+                       <div class="swiper-pagination"></div>
+                   </div>
+               </div>
+           </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__header">
+                <a href="#" class="footer__logo logo">Meta V</a>
+                <div class="footer__description">
+                    <p>Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies lacus. Nisi porta lorem mollis aliquam ut porttitor</p>
+                </div>
+            </div>
+            <div class="footer__body footer-columns">
+                <div class="footer-columns__column">
+                  <h3 class="footer-columns__title">About Us</h3>
+                  <ul class="footer-columns__list">
+                      <li class="footer-columns__item">
+                          <a href="#" class="footer-columns__link">About MetaV</a>
+                          <a href="#" class="footer-columns__link">Contact Us</a>
+                          <a href="#" class="footer-columns__link">FAQ</a>
+                          <a href="#" class="footer-columns__link">Privacy Policy</a>
+                          <a href="#" class="footer-columns__link">Terms of Service</a>
+                      </li>
+                  </ul>
+              </div>
+                <div class="footer-columns__column">
+                    <h3 class="footer-columns__title">Services</h3>
+                    <ul class="footer-columns__list">
+                        <li class="footer-columns__item">
+                            <a href="#" class="footer-columns__link">NFT Marketplace</a>
+                            <a href="#" class="footer-columns__link">Virtual Concert</a>
+                            <a href="#" class="footer-columns__link">Gaming</a>
+                            <a href="#" class="footer-columns__link">Artwork</a>
+                            <a href="#" class="footer-columns__link">Online Travel</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-columns__column">
+                    <h3 class="footer-columns__title">Contact</h3>
+                    <ul class="footer-columns__list-social social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <img src="public/images/icons/linkedIn.svg" alt="" class="social__img" width="35" height="35">
+                            </a>
+                            <a href="#" class="social__link">
+                                <img src="public/images/icons/twitter.svg" alt="" class="social__img" width="35" height="35">
+                            </a>
+                            <a href="#" class="social__link">
+                                <img src="public/images/icons/instagram.svg" alt="" class="social__img" width="35" height="35">
+                            </a>
+                            <a href="#" class="social__link">
+                                <img src="public/images/icons/facebook.svg" alt="" class="social__img" width="35" height="35">
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer-columns__copyright">2022 © MetaV.com All right reserved.</p>
+                </div>
+            </div>
+        </div>  
+    </footer>
+</div>
+
+<script type="module" src="/src/scripts/index.js"></script>
+</body>
 </html>

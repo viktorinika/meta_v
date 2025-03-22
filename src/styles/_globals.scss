@@ -1,10 +1,14 @@
+@use "utils/variables" as *;
+@use "utils/functions" as *;
+@use "utils/mixins" as *;
+@use "utils/media" as *;
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
-  color: var(--color-laight);
+  font-family: $fontFamily;
+  background: $backgroundBody;
+  color: $colorLight;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: rem(18);
   line-height: 1.67;
   height: 100%;
   &.menu-open {
@@ -26,9 +30,9 @@ body {
 }
 
 .container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  max-width: calc($containerWidth + $containerPaddingX * 2);
   margin: 0 auto;
-  padding: 0 var(--container-padding-x);
+  padding: 0 $containerPaddingX;
 }
 
 h1,
@@ -37,19 +41,40 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: $secondFamily;
   font-weight: 600;
   line-height: 1.5;
 }
 
 h1 {
-  font-size: clamp(2.188rem, 1.959rem + 0.98vw, 2.813rem);
+  @include fluid-text(45, 32);
 }
 
 h2 {
-  font-size: clamp(2.188rem, 1.959rem + 0.98vw, 2.813rem);
+  @include fluid-text(35, 23);
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: rem(20);
+}
+
+p {
+  color: $colorText;
+}
+
+@keyframes Fade-in {
+  from {
+    translate: 10vw;
+
+  }
+}
+
+h1, h2 {
+  animation-name: Fade-in;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+
+  view-timeline-name: --fade-in-section;
+  animation-timeline: --fade-in-section;
+  animation-reng: 30% 90%;
 }

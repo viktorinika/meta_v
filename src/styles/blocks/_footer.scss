@@ -1,0 +1,79 @@
+@use "../utils" as *;
+
+.footer {
+  background-color: $colorDark;
+  padding-top: fluid(80, 30);
+  padding-bottom: fluid(80, 30);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(30);
+    @media (max-width: rem(1282)){
+      flex-wrap: wrap;
+      flex-direction: column;
+      row-gap: rem(30);
+    }
+  }
+
+  &__header {
+    max-width: rem(500);
+    display: grid;
+    row-gap: rem(23);
+  }
+
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @include mobile {
+      flex-wrap: wrap;
+      row-gap: rem(30);
+    }
+  }
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  column-gap: rem(30);
+
+  &__column {
+    display: grid;
+    row-gap: rem(16);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    a {
+      display: block;
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.logo {
+  font-family: $secondFamily;
+  font-weight: 700;
+  font-size: rem(50);
+  background: linear-gradient(158deg, #f86cf8 0%, #64cef5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include mobile {
+    font-size: rem(35);
+  }
+}
+
+.social {
+  &__link {
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}
