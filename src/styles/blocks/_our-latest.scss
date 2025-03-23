@@ -20,7 +20,6 @@
   }
 }
 
-
 .swiper {
   max-width: rem(1182);
 
@@ -74,16 +73,17 @@
     backdrop-filter: blur(10px);
     border: 1px solid $colorLight;
     z-index: 3;
+    transition-duration: 0.3s;
     &::before {
       content: '';
       @include abs-center;
-      width: rem(39);
+      width: rem(38);
       height: rem(50);
       background-image: url("/public/images/icons/play.svg");
       background-repeat: no-repeat;
     }
     @include hover {
-      opacity: .2;
+      opacity: .3;
     }
   }
 }

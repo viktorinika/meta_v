@@ -84,19 +84,12 @@
     }
   }
 
-  &__item {
-    transition-duration: 0.3s;
-    @include hover {
-      transform: translateY(5px);
-      color: #d10ed1;
-    }
-  }
-
   &__link {
     font-size: 1rem;
+    transition-duration: 0.3s;
     @include hover {
       transform: translateY(3px);
-      color: #d10ed1;
+      color: #f86cf8;
     }
     @include mobile {
       color: $colorDark;
