@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-  base: '/',
+  base: '/meta_v/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
