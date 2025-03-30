@@ -27,14 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: |
-          cd ../
-          npm install
+        run: npm install
+        working-directory: ./meta_v
 
       - name: Build project
-        run: |
-          cd ../
-          npm run build
+        run: npm run build
+        working-directory: ./meta_v
 
       - name: Checkout
         uses: actions/checkout@v4
