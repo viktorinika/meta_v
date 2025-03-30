@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build project
-      - uses: npm i && npm run build
+      - run: npm i && npm run build
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
